@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="MaterialWpfApplication.View.Chips"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWpfApplication.View"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" >
+    <Grid Margin="32">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">Chips</TextBlock>
+        <StackPanel Grid.Row="1" Margin="0 16 0 0">
+            <WrapPanel Orientation="Horizontal">
+                <materialDesign:Chip Content="Vadim Rybalko" Margin="0 0 6 4">
+                    <materialDesign:Chip.Icon>
+                        <Image Source="../Resources/ProfilePic.png" />
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>
+                <materialDesign:Chip Margin="0 0 4 4">
+                    Example Chip
+                </materialDesign:Chip>
+                <materialDesign:Chip Content="ITVDN" 
+                                     Icon="IT" 
+                                     Margin="0 0 4 4" />
+                <materialDesign:Chip Content="Google inc." 
+                                     Icon="G" 
+                                     Margin="0 0 4 4" />
+                <materialDesign:Chip Content="Twitter"                                  
+                                     IconBackground="{DynamicResource PrimaryHueDarkBrush}"
+                                     IconForeground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                     Margin="0 0 4 4">
+                    <materialDesign:Chip.Icon>
+                        <materialDesign:PackIcon Kind="Twitter"></materialDesign:PackIcon>
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>
+            </WrapPanel>
+            <WrapPanel Margin="0 12 0 0" Orientation="Horizontal">
+                <materialDesign:Chip Content="Vadim Rybalko"
+                                     IsDeletable="True"
+                                     Margin="0 0 4 4"
+                                     x:Name="ButtonsDemoChip"
+                                     ToolTip="Just a tool tip"
+                                     DeleteToolTip="Your friendly neighbour delete button">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding Path=OpenChip}"/>
+                        </i:EventTrigger>
+
+                        <i:EventTrigger EventName="DeleteClick">
+                            <i:InvokeCommandAction Command="{Binding CloseChip}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <materialDesign:Chip.Icon>
+                        <Image Source="../Resources/ProfilePic.png"></Image>
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>
+                <materialDesign:Chip Content="Example Chip"
+                                     IsDeletable="True"
+                                     ToolTip="This is an example chip"
+                                     Margin="0 0 4 4">
+                </materialDesign:Chip>
+                <materialDesign:Chip Content="ITVDN" 
+                                     Icon="IT"
+                                     IsDeletable="True"
+                                     Margin="0 0 4 4" />
+                <materialDesign:Chip Content="Google inc." 
+                                     Icon="G" 
+                                     IsDeletable="True"
+                                     IconBackground="{DynamicResource PrimaryHueLightBrush}"
+                                     IconForeground="{DynamicResource PrimaryHueLightForegroundBrush}"
+                                     Margin="0 0 4 4" />
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

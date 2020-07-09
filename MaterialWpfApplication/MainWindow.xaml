@@ -1,0 +1,71 @@
+﻿<Window x:Class="MaterialWpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MaterialWpfApplication"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Google Material Design" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="2">
+                        <Button Content="Palette" Margin="2" Command="{Binding OpenPaletteCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Buttons" Margin="2" Command="{Binding OpenButtonsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Text fields" Margin="2" Command="{Binding OpenTextFieldsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Pickers" Margin="2" Command="{Binding OpenPickersCommand}"/>
+                        <Button Content="Sliders" Margin="2" Command="{Binding OpenSlidersCommand}"/>
+                        <Button Content="Chips" Margin="2" Command="{Binding OpenChipsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Typography" Margin="2" Command="{Binding OpenTypographyCommand}"/>
+                        <Button Content="Shadows" Margin="2" Command="{Binding OpenShadowsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Cards" Margin="2" Command="{Binding OpenCardsCommand}"/>
+                        <Button Content="Icon Pack" Margin="2" Command="{Binding OpenIconPackCommand}"/>
+                        <Button Content="Colour Zone" Margin="2" Command="{Binding OpenColorZoneCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Lists" Margin="2" Command="{Binding OpenListsCommand}"/>
+                        <Button Content="Trees" Margin="2" Command="{Binding OpenTreesCommand}"/>
+                        <Button Content="Grids" Margin="2" Command="{Binding OpenGridsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+                        
+                        <Button Content="Expanders" Margin="2" Command="{Binding OpenExpandersCommand}"/>
+                        <Button Content="Groupboxes" Margin="2" Command="{Binding OpenGroupBoxesCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Menus and Toolbars" Margin="2" Command="{Binding OpenMenusAndToolbarsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Progress Bar" Margin="2" Command="{Binding OpenProgressBarCommand}"/>
+                        <Button Content="Dialogs" Margin="2" Command="{Binding OpenDialogsCommand}"/>
+                        <Button Content="Transitions" Margin="2" Command="{Binding OpenTransitionsCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+                        <Button Content="Snackbars" Margin="2" Command="{Binding OpenSnackbarsCommand}"/>
+                        <Button Content="Drawers" Margin="2" Command="{Binding OpenDrawersCommand}"/>
+                        <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,3"/>
+
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Column="1" x:Name="mainGrid">
+
+        </Grid>
+    </Grid>
+</Window>

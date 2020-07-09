@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MaterialWpfApplication.TransitionsWindow.Slide1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWpfApplication.TransitionsWindow"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock>Добро пожаловать в витрину переходов! Нажмите на таблетку, чтобы начать ...</TextBlock>
+
+            <!-- you can easily use the move next, previous, first and last commands -->
+            <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="64"
+                    Command="{x:Static materialDesign:Transitioner.MoveNextCommand}">
+                <materialDesign:PackIcon Kind="Pill" />
+            </Button>
+        </StackPanel>
+    </materialDesign:ColorZone>
+</UserControl>

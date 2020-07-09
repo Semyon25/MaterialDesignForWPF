@@ -1,0 +1,384 @@
+﻿<UserControl x:Class="MaterialWpfApplication.View.Buttons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWpfApplication.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Margin="10,0,0,0">
+        <Grid VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Buttons" Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Horizontal" Margin="0 12 0 0 ">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Margin="0 0 8 0" HorizontalAlignment="Left"
+                            ToolTip="MaterialDesignFloatingActionMiniLightButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Margin="0 0 8 0" HorizontalAlignment="Left"
+                            ToolTip="MaterialDesignFloatingActionMiniButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" Margin="0 0 8 0" HorizontalAlignment="Left"
+                            ToolTip="MaterialDesignFloatingActionMiniDarkButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Margin="0 0 8 0" HorizontalAlignment="Left"
+                            ToolTip="MaterialDesignFloatingActionMiniAccentButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                            Margin="0 0 8 0" HorizontalAlignment="Left" ToolTip="MaterialDesignFloatingActionLightButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            Margin="0 0 8 0" HorizontalAlignment="Left" ToolTip="MaterialDesignFloatingActionButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                            Margin="0 0 8 0" HorizontalAlignment="Left" ToolTip="MaterialDesignFloatingActionButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+                            Margin="0 0 8 0" HorizontalAlignment="Left" ToolTip="MaterialDesignFloatingActionButton">
+                        <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24"/>
+                    </Button>
+
+
+
+                    <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                             PlacementMode="BottomAndAlignCentres"
+                                             ToolTipService.Placement="Right"
+                                             ToolTip="Popup Box, MaterialDesignMultiFloatingActionPopupBox">
+
+                        <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Opened">
+                                <i:InvokeCommandAction Command="{Binding OpenPopupBoxCommand}"/>
+                            </i:EventTrigger>
+
+                            <i:EventTrigger EventName="Closed">
+                                <i:InvokeCommandAction Command="{Binding ClosePopupBoxCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>-->
+
+                        <StackPanel>
+                            <Button ToolTip="First button" Opacity="0.5"/>
+                            <Button ToolTip="Second button"/>
+                            <Button ToolTip="Third button"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                    <materialDesign:PopupBox Margin="16 0" StaysOpen="True">
+                        <Grid Width="300" Margin="8">
+                            <Grid.Resources>
+                                <Style TargetType="CheckBox" BasedOn="{StaticResource MaterialDesignCheckBox}">
+                                    <Setter Property="Margin" Value="8,8,10,8"/>
+                                </Style>
+                                <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
+                                    <Setter Property="materialDesign:HintAssist.IsFloating" Value="True"/>
+                                    <Setter Property="Margin" Value="8"/>
+                                </Style>
+                            </Grid.Resources>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="8,8,8,16"
+                                       Text="Options"/>
+
+                            <TextBox Grid.Column="0" Grid.Row="1" materialDesign:HintAssist.Hint="Setting 1" Text="200"/>
+                            <TextBox Grid.Column="0" Grid.Row="2" materialDesign:HintAssist.Hint="Setting 2" Text="400"/>
+                            <TextBox Grid.Column="0" Grid.Row="3" materialDesign:HintAssist.Hint="Setting 3" Text="600"/>
+
+                            <CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom"/>
+                            <CheckBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" IsChecked="True"/>
+                            <CheckBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom"/>
+
+                            <ComboBox Grid.Column="0" Grid.Row="4" materialDesign:HintAssist.Hint="Setting 4" materialDesign:HintAssist.IsFloating="True"
+                                      MaxDropDownHeight="200" Margin="8">
+                                <ComboBoxItem Content="25%"/>
+                                <ComboBoxItem Content="50%"/>
+                                <ComboBoxItem Content="100%"/>
+                                <ComboBoxItem Content="200%"/>
+                                <ComboBoxItem Content="500%"/>
+                            </ComboBox>
+                        </Grid>
+                    </materialDesign:PopupBox>
+
+                    <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" PlacementMode="BottomAndAlignCentres"
+                                             Margin="0 0 50 0"
+                                             ToolTip="PopupBox, MaterialDesignMultiFloatingActionAccentPopupBox">
+                        <materialDesign:PopupBox.ToggleCheckedContent>
+                            <materialDesign:PackIcon Kind="Pencil" Width="24" Height="24"/>
+                        </materialDesign:PopupBox.ToggleCheckedContent>
+
+                        <StackPanel >
+                            <Button Content="One" ToolTip="1"/>
+                            <Button Content="Two" IsEnabled="False" ToolTip="2"/>
+                            <Button Content="Three" ToolTip="3"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 16 0 0 ">
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}" ToolTip="MaterialDesignRaisedLightButton" Content="Ligth" Margin="0 0 8 0"/>
+                <Button Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton" Content="Mid" Margin="0 0 8 0"/>
+                <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" ToolTip="MaterialDesignRaisedDarkButton" Content="Dark" Margin="0 0 8 0"/>
+
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" ToolTip="MaterialDesignRaisedAccentButton" Content="Accent" Margin="0 0 8 0"/>
+
+                <materialDesign:Badged Margin="0 12 16 4" Badge="3">
+                    <Button Content="Mail"/>
+                </materialDesign:Badged>
+
+                <materialDesign:Badged Margin="0 12 16 4" Badge="{materialDesign:PackIcon Heart}" BadgeColorZoneMode="Accent">
+                    <Button Content="Love"/>
+                </materialDesign:Badged>
+
+                <materialDesign:Badged Margin="0 12 28 4" Badge="Danger" BadgeColorZoneMode="Dark">
+                    <Button Content="Status"/>
+                </materialDesign:Badged>
+
+                <materialDesign:Badged Margin="0 12 28 4" x:Name="CountingBadge" BadgeColorZoneMode="PrimaryDark">
+                    <Button Content="Click me!!" Style="{StaticResource MaterialDesignRaisedLightButton}" Click="Button_Click"/>
+                </materialDesign:Badged>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Margin="0 24 0 0" Orientation="Horizontal">
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="0 0 8 0" Width="150"
+                        ToolTip="Button, MaterialDesignRaisedAccentButton" 
+                        materialDesign:RippleAssist.Feedback="#DD000000" Content="Custom Ripple"/>
+
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="0 0 8 0" Width="150"
+                        ToolTip="Button, MaterialDesignRaisedAccentButton" 
+                        materialDesign:RippleAssist.IsDisabled="True" Content="NO Ripple"/>
+
+                <RepeatButton Margin="0 0 8 0" Width="100" ToolTip="MaterialDesignRaisedButton" Content="Repeat"/>
+
+                <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Margin="200 0 0 0" Content="Accept"/>
+
+                <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="MaterialDesignFlatButton" Margin="10 0 0 0" Content="Cancel"/>
+            </StackPanel>
+
+            <Border Margin="0 16 0 0" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Grid.Row="4"/>
+            <TextBlock Text="Toggles-button" Grid.Row="4" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="0 32 0 24"/>
+
+            <Grid Grid.Row="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <ToggleButton Content="C" Margin="0 0 8 8" Style="{StaticResource MaterialDesignActionLightToggleButton}" IsChecked="True"
+                                  ToolTip="MaterialDesignActionLightToggleButton"/>
+
+                    <ToggleButton Content="H" Margin="0 0 8 8" Style="{StaticResource MaterialDesignActionToggleButton}"
+                                  ToolTip="MaterialDesignActionToggleButton"/>
+
+                    <CheckBox Content="E" Margin="0 0 8 8" Style="{StaticResource MaterialDesignActionDarkCheckBox}"
+                                  ToolTip="MaterialDesignActionDarkCheckBox"/>
+
+                    <ToggleButton Content="C" Margin="0 0 8 8" Style="{StaticResource MaterialDesignActionAccentToggleButton}"
+                                  ToolTip="MaterialDesignActionAccentToggleButton" IsChecked="True"/>
+
+                    <ToggleButton Content="K" Margin="0 0 8 8" Style="{StaticResource MaterialDesignActionToggleButton}"
+                                  ToolTip="MaterialDesignActionToggleButton" IsEnabled="False"/>
+
+                    <ToggleButton Margin="0 0 8 8" Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="MaterialDesignActionToggleButton">
+                        <Image Source="../Resources/ProfilePic.png"/>
+                    </ToggleButton>
+
+                    <TextBlock Margin="16 0 8 0" VerticalAlignment="Center" Text="Customize Content:"/>
+                    <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}" ToolTip="MaterialDesignActionToggleButton">
+                        <ToggleButton.Content>
+                            <materialDesign:PackIcon Kind="EmoticonSad"/>
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <materialDesign:PackIcon Kind="EmoticonHappy"/>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="0 16 0 0" Orientation="Horizontal">
+                    <RadioButton Style="{StaticResource MaterialDesignRadioButton}" Margin="0 0 8 8" Content="IsChecked" VerticalAlignment="Center" IsChecked="True"/>
+                    <RadioButton Style="{StaticResource MaterialDesignRadioButton}" Margin="0 0 8 8" Content="Default" VerticalAlignment="Center"/>
+                    <RadioButton Style="{StaticResource MaterialDesignRadioButton}" Margin="0 0 8 8" Content="NotEnabled" VerticalAlignment="Center" IsEnabled="False"/>
+
+                    <CheckBox Content="Check" Style="{StaticResource MaterialDesignCheckBox}" Margin="0 0 8 8" VerticalAlignment="Center" IsChecked="True"/>
+                    <CheckBox Content="Default" Style="{StaticResource MaterialDesignCheckBox}" Margin="0 0 8 8" VerticalAlignment="Center" />
+                    <CheckBox Content="Disabled" Style="{StaticResource MaterialDesignCheckBox}" Margin="0 0 8 8" VerticalAlignment="Center" IsEnabled="False"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="0 16 0 0" Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" VerticalAlignment="Center" ToolTip="MaterialDesignSwitchToggleButton"  Margin="8 0 0 0"/>
+                    <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" VerticalAlignment="Center" IsEnabled="False" ToolTip="isEnabled MaterialDesignSwitchToggleButton"  Margin="8 0 0 0"/>
+                    <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" VerticalAlignment="Center" IsChecked="True" ToolTip="IsChecked MaterialDesignSwitchToggleButton"  Margin="8 0 0 0"/>
+
+
+                    <ToggleButton Style="{StaticResource MaterialDesignSwitchDarkToggleButton}" ToolTip="MaterialDesignSwitchDarkToggleButton"
+                                  VerticalAlignment="Center" Margin="8 0 0 0"/>
+                    <ToggleButton Style="{StaticResource MaterialDesignSwitchAccentToggleButton}" VerticalAlignment="Center" Margin="8 0 0 0" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Margin="0 16 0 0" Orientation="Horizontal">
+                    <ToggleButton Style="{StaticResource MaterialDesignFlatToggleButton}" ToolTip="MaterialDesignFlatToggleButton">
+                        <materialDesign:PackIcon Kind="Paperclip" Height="21" Width="21"/>
+                    </ToggleButton>
+
+                    <ToggleButton Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}" Margin="8 0 0 0"
+                                  ToolTip="MaterialDesignFlatPrimaryToggleButton" IsChecked="True">
+                        <materialDesign:PackIcon Kind="Heart" Height="21" Width="21"/>
+                    </ToggleButton>
+
+                    <ToggleButton Style="{StaticResource MaterialDesignFlatToggleButton}" ToolTip="MaterialDesignFlatToggleButton" IsEnabled="False" Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="Heart" Height="21" Width="21"/>
+                    </ToggleButton>
+                </StackPanel>
+
+                <ListBox Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignToolToggleListBox}" SelectedIndex="0">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="MaterialDesignToolToggleListBox"/>
+                            <TextBlock Text="Exclusive selection"/>
+                            <TextBlock Text="ListBoxAssist.IsToggle"/>
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignLeft"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignCenter"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignRight"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignJustify"/>
+                    </ListBoxItem>
+                </ListBox>
+
+                <ListBox Grid.Column="1" Grid.Row="1" Style="{StaticResource MaterialDesignToolToggleFlatListBox}" SelectedIndex="0">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="MaterialDesignToolToggleFlatListBox"/>
+                            <TextBlock Text="Exclusive selection"/>
+                            <TextBlock Text="ListBoxAssist.IsToggle"/>
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignLeft"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignCenter"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignRight"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatAlignJustify"/>
+                    </ListBoxItem>
+                </ListBox>
+
+                <ListBox Grid.Column="1" Grid.Row="2" Style="{StaticResource MaterialDesignToolToggleListBox}"
+                         SelectionMode="Extended" Margin="0 8 0 0">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="MaterialDesignToolToggleFlatListBox"/>
+                            <TextBlock Text="Exclusive selection"/>
+                            <TextBlock Text="ListBoxAssist.IsToggle"/>
+                        </StackPanel>
+                    </ListBox.ToolTip>
+
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatBold"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatItalic"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon Kind="FormatUnderline"/>
+                    </ListBoxItem>
+                </ListBox>                
+            </Grid>
+
+            <Border Grid.Row="6" Margin="0 16 0 0" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
+            <TextBlock Margin="0 32 0 0" Grid.Row="6" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="Rating bar"/>
+
+            <StackPanel Grid.Row="7" Margin="0 16 0 0" Orientation="Horizontal">
+                <materialDesign:RatingBar Value="4" x:Name="BasicRatingBar"/>
+
+                <TextBlock Text="{Binding ElementName=BasicRatingBar, Path=Value, StringFormat=Rating: {0}}" VerticalAlignment="Top" Margin="10 2 0 0"/>
+
+                <materialDesign:RatingBar x:Name="CustomRaingBar" Max="3" Value="2" Margin="24 0 0 0" Orientation="Vertical">
+                    <materialDesign:RatingBar.ValueItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <materialDesign:PackIcon Kind="Heart" Height="24" Width="24"/>
+                                <TextBlock Text="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="8" Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </materialDesign:RatingBar.ValueItemTemplate>
+                </materialDesign:RatingBar>
+
+                <TextBlock Text="{Binding ElementName=CustomRaingBar, Path=Value, StringFormat=Rating: {0}}" VerticalAlignment="Top" Margin="10 2 0 0"/>
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</UserControl>
